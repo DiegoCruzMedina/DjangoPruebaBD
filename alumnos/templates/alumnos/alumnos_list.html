@@ -6,7 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hola mundo desde Django</h1>
+    <h1>Listar Alumnos</h1>
+
+    <button>
+        <a href="{% url 'alumnosAdd' % }">Agregar</a>
+    </button>
+    <div id="idMensajes">
+    </div>
+    
     {% for alumno in alumnos%}
         {{alumno.nombre}} , {{alumno.apellido_paterno}} , {{alumno.apellido_materno}} <br>
     {% endfor%}
